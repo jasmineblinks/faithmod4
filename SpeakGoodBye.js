@@ -1,4 +1,4 @@
-// NOTE! The steps in this file are basically identical to the ones you
+/// NOTE! The steps in this file are basically identical to the ones you
 // performed in the SpeakHello.js file.
 
 // STEP 6: Wrap the entire contents of SpeakGoodBye.js inside of an IIFE
@@ -24,21 +24,11 @@
 // xxxx.xxxx = byeSpeaker;
 (function (window) {
   var byeSpeaker = {};
-  byeSpeaker.names = [
-    "Yaakov",
-    "John",
-    "Jen",
-    "Jason",
-    "Paul",
-    "Frank",
-    "Larry",
-    "Paula",
-    "Laura",
-    "Jim",
-  ];
+  byeSpeaker.name = [];
   var speakWord = "Good Bye";
-  function speak(name) {
-    console.log(speakWord + " " + name);
-  }
+
+  byeSpeaker.speak = function () {
+    console.log(speakWord + byeSpeaker.name);
+  };
   window.byeSpeaker = byeSpeaker;
 })(window);
